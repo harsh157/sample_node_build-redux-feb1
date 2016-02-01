@@ -29,4 +29,10 @@ build:
   post_ci:
     - docker push harsh157/sample_node
 
-
+integrations:
+  hub:
+    - integrationName: harsh-gcr
+      type: ecr
+      branches:
+        only:
+          - master
