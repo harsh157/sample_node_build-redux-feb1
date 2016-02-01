@@ -31,7 +31,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: harsh-gcr
+    - integrationName: harsh
       type: ecr
       branches:
         only:
