@@ -14,10 +14,10 @@ env:
 
 build:
   pre_ci:
-    - docker build -t=harsh157/sample_node .
+    - docker build -t=harsh157/sample_node_gcr .
 
   pre_ci_boot:
-    image_name: harsh157/sample_node
+    image_name: harsh157/sample_node_gcr
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -27,7 +27,7 @@ build:
     - ls -al
 
   post_ci:
-    - docker push harsh157/sample_node
+    - docker push harsh157/sample_node_gcr
 
 integrations:
   hub:
